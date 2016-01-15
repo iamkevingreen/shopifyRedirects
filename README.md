@@ -38,3 +38,23 @@ Navigate to `http://localhost:3000` and enter in your creds and json file with t
   ]
 }
 ```
+
+#### Meteor Settings Route
+
+You could also create a settings.json file with the api_key/password/store and have the meteor server call access that instead of having to type them in over and over again. ;d
+
+```
+{
+  "shopify": {
+    "api_key": "######",
+    "password": "######",
+    "store": "#######"
+  }
+}
+```
+
+Then in your `server.js` instead of referencing the input fields you can use:
+
+`Meteor.settings.shopify.api_key`... ect.
+
+When running meteor you would append the run command: `meteor --settings settings.json`
