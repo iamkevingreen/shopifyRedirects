@@ -18,3 +18,23 @@ Once installed git pull the repo and navigate to the root, and run `meteor` in t
 Navigate to `http://localhost:3000` and enter in your creds and json file with the all of your redirects.
 
 ## Enjoy
+
+
+#### Sample json
+
+`path` is the original url from the old system and `target` is the new shopify url:
+
+```
+{
+  "redirects": [
+    {
+      "path": "/old-product",
+      "target": "/products/new-product"
+    },
+    {
+      "path": "/products/collections/tops",
+      "target": "/collections/tops"
+    }
+  ]
+}
+```
