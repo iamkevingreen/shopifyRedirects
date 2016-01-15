@@ -1,6 +1,8 @@
 Shopify URL Redirect Importer
 =======
 
+*don't feel like running it locally? run it [online here](http://shopify_redirects.meteor.com)*
+
 I didn't like any of the existing options and didn't want to install an app, or even install an app that requires continuous cost.
 
 The purpose of this application is for the initial upload of shopify redirect links, in the case of transferring to shopify from another platform for the very first time for example.
