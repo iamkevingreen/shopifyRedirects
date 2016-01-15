@@ -1,14 +1,85 @@
 <head>
   <title>shopifyRedirects</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,100' rel='stylesheet' type='text/css'>
+  <style>
+    html, body {
+      margin: 0 0;
+      padding: 0 0;
+      font-family: 'Roboto Mono';
+      font-size: 14px;
+      font-weight: 300;
+    }
+    h1 {
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+    .wrapper {
+      padding: 40px;
+      max-width: 600px;
+    }
+    input {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid rgba(0,0,0,.1);
+      margin-bottom: 10px;
+    }
+    input[type="file"] {
+      border: 0;
+    }
+    .btn {
+      border: 1px solid black;
+      font-family: 'Roboto Mono';
+      font-weight: 500;
+      font-size: .8rem;
+      padding: 10px 30px;
+      cursor: pointer;
+      background: black;
+      color: white;
+      transition: all .25s;
+    }
+    .btn:hover {
+      color: black;
+      background: none;
+    }
+    pre {
+      padding-left: 10px;
+      font-size: .8rem;
+      color: rgba(0,0,0,.4);
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <div class="wrapper">
+    <header class="header">
+      <h1>Shopify URL Redirect Importer</h1>
+      <p>Currently the only supported format for upload is a json file, review the snippet below before uplaoding your own file.</p>
+    </header>
+    <pre>
+  {
+    "redirects": [
+      {
+        "old": "/original/store-item",
+        "new": "/products/store-item"
+      },
+      {
+        "old": "/original/store-item-1",
+        "new": "/products/store-item-2"
+      }
+    ]
+  }
+    </pre>
 
-  {{> hello}}
+    {{> form}}
+  </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="form">
+  <form>
+    <input type="text" required ref="key" name="store" id="store" placeholder="Shopify Store" />
+    <input type="text" required ref="key" name="key" id="key" placeholder="Shopify API Key" />
+    <input type="text" required ref="key" name="password" id="password" placeholder="Shopify API Password" />
+    <input type="file" required id="file" ref="redirect" />
+    <button type="submit" class="btn">Import</button>
+  </form>
 </template>

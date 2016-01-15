@@ -1,1 +1,45 @@
 /* CSS declarations go here */
+html, body {
+  margin: 0 0;
+  padding: 0 0;
+  font-family: 'Roboto Mono';
+  font-size: 14px;
+  font-weight: 300;
+}
+h1 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.wrapper {
+  padding: 40px;
+  max-width: 600px;
+}
+input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid rgba(0,0,0,.1);
+  margin-bottom: 10px;
+}
+input[type="file"] {
+  border: 0;
+}
+.btn {
+  border: 1px solid black;
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+  font-size: .8rem;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: black;
+  color: white;
+  transition: all .25s;
+}
+.btn:hover {
+  color: black;
+  background: none;
+}
+pre {
+  padding-left: 10px;
+  font-size: .8rem;
+  color: rgba(0,0,0,.4);
+}
