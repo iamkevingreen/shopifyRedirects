@@ -17,6 +17,7 @@ var API = Shopify.API = function ShopifyAPI(options) {
     return this.config;
   }
 
+
   this.getPrivateAppHeaders = function() {
     return this.config.api_key + ":" + this.config.password;
   }
